@@ -1,23 +1,48 @@
 package com.faraponoff.demo.service;
 
 import com.faraponoff.demo.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import repository.UserRepository;
 
 import java.util.List;
 
-public interface UserService {
+@Service
+@Transactional
+public class UserService {
 
+    private PasswordEncoder passwordEncoder;
+    private UserRepository userRepository;
 
-    List<User> getAllUsers();
+    @Autowired
+    public UserService(PasswordEncoder passwordEncoder, UserRepository userRepository) {
+        this.passwordEncoder = passwordEncoder;
+        this.userRepository = userRepository;
+    }
 
-    User getUserById(Long id);
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+    public User getUserById(long id) {
+        return userRepository.findById(id).get();
+    }
 
-    void deleteUser(Long id);
+    public void deleteUser(long id) {
+        userRepository.deleteById(id);
+    }
+    public User saveUser(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        return userRepository.save(user);
+    }
 
-    User saveUser(User user, String[] roleNames);
+    public User updateUser(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        return userRepository.save(user);
+    }
 
-    User updateUser(User user, String[] roleNames);
-
-    User getUserByUsername(String username);
-
-
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
 }
