@@ -1,5 +1,6 @@
 package com.faraponoff.demo.model;
 
+
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
