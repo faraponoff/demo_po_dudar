@@ -1,6 +1,6 @@
 package com.service;
 
-import com.faraponoff.demo.model.Role;
+import com.model.Role;
 
 import java.util.List;
 

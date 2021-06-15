@@ -1,6 +1,6 @@
 package com.dao;
 
-import com.faraponoff.demo.model.Role;
+import com.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

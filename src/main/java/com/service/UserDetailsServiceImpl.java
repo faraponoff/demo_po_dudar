@@ -1,6 +1,7 @@
 package com.service;
 
-import com.faraponoff.demo.model.User;
+import com.dao.UserDAO;
+import com.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,7 +15,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private final UserDAO userDAO;
 
 
-//    @Autowired
+   @Autowired
     public UserDetailsServiceImpl(UserDAO userDAO) {
         this.userDAO = userDAO;
     }
@@ -22,7 +23,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     @Transactional
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        User user = userDAO.getUserByEmail(s);
+        UserDetails user = userDAO.getUserByEmail(s);
         if (user == null) {
             throw new UsernameNotFoundException(String.format("Юзера %s не существует", s));
         }

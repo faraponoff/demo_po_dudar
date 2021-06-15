@@ -1,4 +1,4 @@
-package com.faraponoff.demo.model;
+package com.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,6 +1,6 @@
 package com.controler;
 
-import com.faraponoff.demo.model.User;
+import com.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

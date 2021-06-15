@@ -1,7 +1,7 @@
 package com.service;
 
 import com.dao.UserDAO;
-import com.faraponoff.demo.model.User;
+import com.model.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

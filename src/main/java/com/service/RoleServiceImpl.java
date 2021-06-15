@@ -1,6 +1,6 @@
 package com.service;
 
-import com.faraponoff.demo.model.Role;
+import com.model.Role;
 import com.dao.RoleDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

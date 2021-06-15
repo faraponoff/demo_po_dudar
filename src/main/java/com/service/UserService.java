@@ -1,6 +1,6 @@
 package com.service;
 
-import com.faraponoff.demo.model.User;
+import com.model.User;
 
 import java.util.List;
 
