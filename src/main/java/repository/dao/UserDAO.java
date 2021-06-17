@@ -1,11 +1,11 @@
-package com.service;
+package repository.dao;
 
-import com.model.User;
+import repository.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface UserService {
-
+public interface UserDAO {
 
     List<User> getAllUsers();
 
@@ -17,7 +17,6 @@ public interface UserService {
 
     User updateUser(User user, String[] roleNames);
 
-    User getUserByUsername(String username);
-
+    User getUserByEmail(String username);
 
 }

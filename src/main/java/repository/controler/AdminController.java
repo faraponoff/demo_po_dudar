@@ -1,21 +1,19 @@
-package com.controler;
+package repository.controler;
 
-import com.model.User;
+import repository.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import com.service.RoleService;
-import com.service.UserService;
+import repository.service.RoleService;
+import repository.service.UserService;
 
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
 
-    private UserService userService;
-    private RoleService roleService;
-
-
+    private final UserService userService;
+    private final RoleService roleService;
 
     @Autowired
     public AdminController(UserService userService, RoleService roleService) {
@@ -23,20 +21,20 @@ public class AdminController {
         this.roleService = roleService;
     }
 
-    @GetMapping("")
+    @GetMapping()
     public String showAllUsers(Model model) {
         model.addAttribute("users", userService.getAllUsers());
-        return "users";
+        return "/users";
     }
 
-    @GetMapping("/")
+    @GetMapping("/{id}")
     public String showUserById(@RequestParam("id") long id, Model model) {
         model.addAttribute("user", userService.getUserById(id));
         return "showUser";
 
     }
 
-    @GetMapping("/new")
+    @GetMapping(value="/new")
     public String newUserForm(Model model) {
         model.addAttribute("user", new User());
         return "newUser";

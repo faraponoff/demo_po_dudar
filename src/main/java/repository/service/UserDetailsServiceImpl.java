@@ -1,7 +1,6 @@
-package com.service;
+package repository.service;
 
-import com.dao.UserDAO;
-import com.model.User;
+import repository.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -21,7 +20,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         UserDetails user = userDAO.getUserByEmail(s);
         if (user == null) {

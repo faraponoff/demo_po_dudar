@@ -1,10 +1,11 @@
-package com.service;
+package repository.dao;
 
-import com.model.Role;
+import repository.model.Role;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface RoleService {
+public interface RoleDAO{
 
     Role getRoleById(int id);
 
@@ -17,5 +18,4 @@ public interface RoleService {
     Role updateRole(Role role);
 
     Role getRoleByName(String roleName);
-
 }
