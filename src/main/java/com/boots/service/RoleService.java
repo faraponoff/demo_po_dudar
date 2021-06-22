@@ -1,9 +1,9 @@
-package repository.service;
+package com.boots.service;
 
 import org.springframework.stereotype.Service;
-import repository.model.Role;
+import com.boots.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
-import repository.RoleRepository;
+import com.boots.repository.RoleRepository;
 
 import java.util.List;
 @Service

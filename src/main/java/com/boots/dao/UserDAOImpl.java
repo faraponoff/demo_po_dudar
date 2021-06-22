@@ -1,9 +1,9 @@
-package repository.dao;
+package com.boots.dao;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import repository.model.Role;
-import repository.model.User;
+import com.boots.model.Role;
+import com.boots.model.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

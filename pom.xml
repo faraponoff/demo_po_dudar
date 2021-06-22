@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.5.0</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from com.boots.repository -->
 	</parent>
 	<groupId>com.faraponoff</groupId>
 	<artifactId>demo</artifactId>
@@ -26,6 +26,9 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+			<property>
+				<start-class>com.boots.Application</start-class>
+			</property>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

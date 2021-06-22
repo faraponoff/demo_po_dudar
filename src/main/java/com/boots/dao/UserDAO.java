@@ -1,7 +1,6 @@
-package repository.dao;
+package com.boots.dao;
 
-import repository.model.User;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.boots.model.User;
 
 import java.util.List;
 

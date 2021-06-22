@@ -1,7 +1,6 @@
-package repository.dao;
+package com.boots.dao;
 
-import repository.model.Role;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.boots.model.Role;
 
 import java.util.List;
 

@@ -1,11 +1,11 @@
-package repository.service;
+package com.boots.service;
 
-import repository.model.User;
+import com.boots.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import repository.UserRepository;
+import com.boots.repository.UserRepository;
 
 import java.util.List;
 

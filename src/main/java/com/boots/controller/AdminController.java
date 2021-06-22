@@ -1,12 +1,12 @@
-package repository.controler;
+package com.boots.controller;
 
-import repository.model.User;
+import com.boots.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import repository.service.RoleService;
-import repository.service.UserService;
+import com.boots.service.RoleService;
+import com.boots.service.UserService;
 
 @Controller
 @RequestMapping("/admin")
@@ -62,7 +62,7 @@ public class AdminController {
     }
 
     @PostMapping("/delete")
-    public String deleteUser(@RequestParam("id") long id) {
+    public String deleteUser(Model model, @RequestParam("id") long id) {
         userService.deleteUser(id);
         return "redirect:/admin";
     }

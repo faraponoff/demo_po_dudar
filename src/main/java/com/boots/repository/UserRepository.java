@@ -1,6 +1,6 @@
-package repository;
+package com.boots.repository;
 
-import repository.model.User;
+import com.boots.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

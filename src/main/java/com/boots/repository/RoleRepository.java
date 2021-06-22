@@ -1,6 +1,6 @@
-package repository;
+package com.boots.repository;
 
-import repository.model.Role;
+import com.boots.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoleRepository extends JpaRepository<Role, Integer> {
